@@ -25,5 +25,6 @@ The main objectives of the project are as follows:
 
 <u>Install Dependencies<u>
 - pip install flask spotipy pandas numpy umap scikit-learn
+
 #Setup variables
 - Setup SPOTIPY_CLIENT_ID and SPOTIPY_CLIENT_SECRET in a config.py file with your own Spotify client credentials
