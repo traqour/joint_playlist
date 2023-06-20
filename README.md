@@ -1,2 +1,27 @@
-# joint_playlist
-Spotify joint playlist project
+# Spotify Joint Playlist Project
+
+Created an app that will create a joint playlist between two users on Spotify, creating a playlist with songs that both people should enjoy.
+
+## Project Overview
+
+This project utilizes the Spotify API to retrieve user data on short, medium, and long term songs that the user listens to. By analyzing this data along with additional custom data, the project aims to recommend the best songs from one user to another. The recommendation process involves comparing song metrics obtained from the Spotify API, as well as comparing the genres associated with each song to a user's overall genres.
+
+The main objectives of the project are as follows:
+
+- Retrieve user data on short, medium, and long term songs from the Spotify API.
+- Compare song metrics, such as popularity, acousticness, energy, etc.
+- Compare the genres associated with each song to the user's overall genres.
+- Generate recommendations based on the comparison results.
+- Creates a playlist for the user on Spotify and give some insight on how the songs were chosen.
+
+## Prerequisites
+
+- Python (version 3.6 or above) installed on your system
+- pip package manager
+
+## Configuration
+
+#Install Dependencies
+- pip install flask spotipy pandas numpy umap scikit-learn
+#Setup variables
+- Setup SPOTIPY_CLIENT_ID and SPOTIPY_CLIENT_SECRET in a config.py file with your own Spotify client credentials
