@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Tracks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1> Playlist Created!</h1>
+    <a href="{{link}}" id="playlist_link" target="_blank">Link to playlist</a>
+    <div class ='table-container'>
+        <div class="table-wrapper" id="table1">
+            <h1>Your Tracks</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Song</th>
+                        <th>Score Rank</th>
+                        <th>Metric Similarity Rank</th>
+                        <th>Genre Similarity Rank</th>
+                        <th>Weighted Rank</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for track in user1 %}
+                    <tr>
+                        <td>
+                            <iframe class="iframe-track" allowtransparency="true"
+                            src="https://open.spotify.com/embed/track/{{ track[0] }}"
+                            allow="encrypted-media" frameborder="0"></iframe>
+                        </td>
+                        <td>{{ track[12] }}</td>
+                        <td>{{ track[13] }}</td>
+                        <td>{{ track[14] }}</td>
+                        <td>{{ track[15] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-wrapper" id="table2">
+            <h1>My Tracks</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Song</th>
+                        <th>Score Rank</th>
+                        <th>Metric Similarity Rank</th>
+                        <th>Genre Similarity Rank</th>
+                        <th>Weighted Rank</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for track in user2 %}
+                    <tr>
+                        <td>
+                            <iframe class="iframe-track" allowtransparency="true"
+                            src="https://open.spotify.com/embed/track/{{ track[0] }}"
+                            allow="encrypted-media" frameborder="0"></iframe>
+                        </td>
+                        <td>{{ track[12] }}</td>
+                        <td>{{ track[13] }}</td>
+                        <td>{{ track[14] }}</td>
+                        <td>{{ track[15] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-wrapper" id ="table3">
+            <h1>Shared Tracks</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Song</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for track in matches %}
+                    <tr>
+                        <td>
+                            <iframe class="iframe-track" allowtransparency="true"
+                            src="https://open.spotify.com/embed/track/{{ track[0] }}"
+                            allow="encrypted-media" frameborder="0"></iframe>
+                        </td>
+                        <td>{{ track[3] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="rank-container">
+        <h2>Score Rank</h2>
+        <p>The rank of the song in terms of how much you like it. More emphasis on most listened to short and long term songs.</p>
+      
+        <h2>Metric Similarity Rank</h2>
+        <p>Rank of the song in terms of how much it matches the other person's taste. Using Spotify’s assigned metrics (e.g., Danceability, acousticness), doing a UMAP dimensionality reduction then calculating euclidean distance to other person's cluster centers. Lower distance = higher rank.</p>
+      
+        <h2>Genre Similarity Rank</h2>
+        <p>Rank of song in terms of how much the song's genres match the genres of the other user. A user's taste represented as a vector of term frequency of all genres across all songs. Calculating cosine similarity to measure how closely it matches.<br>
+        <em>Disclaimer: Can only get the genres assigned to the artist, not specific to each song.</em></p>
+      
+        <h2>Weighted Rank</h2>
+        <p>Combining the three ranks with score rank being half as important as the other two. Want to make sure the user likes the song too but more important that it matches the other person's taste. Assuming every song is already somewhat liked by the user it came from.</p>
+      </div>
+</body>
+</html>

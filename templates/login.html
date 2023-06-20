@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Joint Playlist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <div class="centered">
+        <h1>Joint Playlist with Will</h1>
+        <p class="main">Welcome to my joint playlist project! I created an algorithm that compares two users' most listened to songs in their Spotify assigned metrics as well as with genres of the songs. The goal was to create a playlist that contains songs that both users enjoy. Click the "Login to Spotify!" button below and sign in to your Spotify account to create a joint playlist with me! </p>
+        <div class="button-container">
+            <a href="{{auth_url}}"><button id="create_playlist">Login to Spotify!</button></a>
+        </div>
+    </div>
+</body>
+</html>

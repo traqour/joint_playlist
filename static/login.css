@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+body {
+  display: flex;
+  background: #262626;
+  color: #fff000;
+  text-align: center;
+  font-family: Ubuntu;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+.centered {
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  font-weight: bold;
+  background-color: #6d36a7;
+  border-radius: 10px;
+  display: inline;
+  padding: 5px;
+  margin-bottom: 0px;
+  border: 2px solid #fff000;
+}
+
+#create_playlist {
+    cursor:pointer;
+    background-color: #6d36a7;
+    color: #fff000;
+    font-family: Ubuntu;
+    border-radius: 10px;
+    text-decoration: underline;
+    padding: 5px;
+    border: 2px solid #fff000;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #6d36a7;
+  border-radius: 10px;
+  padding: 5px;
+  border: 2px solid #fff000;
+}
