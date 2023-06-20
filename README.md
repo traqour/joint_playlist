@@ -1,6 +1,7 @@
 # Spotify Joint Playlist Project
 
 Created an app that will create a joint playlist between two users on Spotify, creating a playlist with songs that both people should enjoy.
+
 Link to a walkthrough of the website: https://youtu.be/MVTnEEGDoyo
 
 ## Project Overview
