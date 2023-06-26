@@ -16,7 +16,6 @@ from config import SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET
 
 app = Flask(__name__, static_folder='static')
 
-app.secret_key = 'falkdjflasdkncxzoi12'
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config['SESSION_FILE_DIR'] = './.flask_session/'
 Session(app)
