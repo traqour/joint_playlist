@@ -93,6 +93,8 @@ The main objectives of the project are as follows:
 ![User2 Silhouette](imgs/silhouette2.png)
 ![User2 Kmeans](imgs/kmeans2.png)
 
+- Comapre cluster centers from a user to each song from the other user. Euclidean distance to determine most audibly similar
+
 ### Genres
 - Term Frequency of all genres among all a users songs to represent their taste
 
@@ -107,4 +109,17 @@ Learned that escape room is a genre that I really enjoy!
 ![Combined Features](imgs/song.png)
 
 Really enjoy this song, makes sense
+
+- Compare user's taste to each songs genres. Use cosine similarity to determine similarity to a users genre prefernces
+
+## Generating recommendations
+
+- Create a holistic score representing how good of a recommendation it is for each song based on three things.
+  - Personal score
+    - How much the original user likes their own song
+  - Metric score
+    - How audibly similar a song is to other songs that the user likes
+  - Genre score
+    - How similar are the genres of a song to a users overall genre preferences
+
 
