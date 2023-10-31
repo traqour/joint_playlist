@@ -74,6 +74,7 @@ The main objectives of the project are as follows:
 }
 
 -Final dataframe, added score to signify how much the user likes the song
+
 ![Master DataFrame](imgs/master_df.png)
 
 
@@ -82,10 +83,13 @@ The main objectives of the project are as follows:
 ### Song Metrics
 -Scaled song metrics
 -UMAP dimensionality reduction on features
+
 ![Combined Features](imgs/together.png)
 -KMeans clustering and Silhoutte Method to determine optimal number
+
 ![User1 Silhouette](imgs/silhouette1.png)
 ![User1 Kmeans](imgs/kmeans1.png)
+
 ![User2 Silhouette](imgs/silhouette2.png)
 ![User2 Kmeans](imgs/kmeans2.png)
 
