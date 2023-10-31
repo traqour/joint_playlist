@@ -85,7 +85,7 @@ The main objectives of the project are as follows:
 - UMAP dimensionality reduction on features
 
 ![Combined Features](imgs/together.png)
-- KMeans clustering and Silhoutte Method to determine optimal number
+- KMeans clustering and Silhoutte Method to determine optimal number of clusters
 
 ![User1 Silhouette](imgs/silhouette1.png)
 ![User1 Kmeans](imgs/kmeans1.png)
@@ -97,10 +97,12 @@ The main objectives of the project are as follows:
 - Term Frequency of all genres among all a users songs to represent their taste
 
 ![Combined Features](imgs/user1_taste.png)
+Learned that escape room is a genre that I really enjoy!
+
 ![Combined Features](imgs/user2_taste.png)
 
 - Example genre values of a song after applying TF-IDF vectorizer
 
 ![Combined Features](imgs/song.png)
-
+Really enjoy this song, makes sense
 
