@@ -97,6 +97,7 @@ The main objectives of the project are as follows:
 - Term Frequency of all genres among all a users songs to represent their taste
 
 ![Combined Features](imgs/user1_taste.png)
+
 Learned that escape room is a genre that I really enjoy!
 
 ![Combined Features](imgs/user2_taste.png)
@@ -104,5 +105,6 @@ Learned that escape room is a genre that I really enjoy!
 - Example genre values of a song after applying TF-IDF vectorizer
 
 ![Combined Features](imgs/song.png)
+
 Really enjoy this song, makes sense
 
